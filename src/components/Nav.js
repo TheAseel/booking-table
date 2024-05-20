@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from "../imgs/Logo .svg"
+import logo from "../imgs/Logo .svg";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +9,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className={`navbar ${isOpen ? "open" : ""}`}>
+    <nav className="navbar">
       <img src={logo} alt="Logo" />
 
       <div className="menu-icon" onClick={toggleMenu}>
@@ -28,6 +28,6 @@ const Nav = () => {
       </ul>
     </nav>
   );
-}
+};
 
 export default Nav;
