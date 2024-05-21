@@ -1,11 +1,12 @@
 import React from 'react';
+import logo from "../imgs/small_logo.png"
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-logo">
-          <img src="logo.png" alt="Logo" />
+          <img src={logo}alt="Logo" />
         </div>
         <div className="footer-navigation">
           <ul className="doormat-navigation">
