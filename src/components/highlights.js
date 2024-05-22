@@ -1,7 +1,7 @@
 import React from "react";
-import foodpic2 from "../../imgs/bruchetta.svg";
-import foodpic3 from "../../imgs/desert.jpg";
-import foodpic4 from "../../imgs/greek salad.jpg";
+import foodpic2 from "../imgs/bruchetta.svg";
+import foodpic3 from "../imgs/desert.jpg";
+import foodpic4 from "../imgs/greek salad.jpg";
 
 function Highlights() {
   return (

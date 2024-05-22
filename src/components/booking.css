@@ -1,0 +1,49 @@
+.bookingform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form {
+    display: grid;
+    gap: 20px;
+    max-width: 200px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="date"],
+  select {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="number"],
+  input[type="submit"],
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type="submit"] {
+    background-color: #f8c32d;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #e0b71c;
+  }

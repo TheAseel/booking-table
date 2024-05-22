@@ -1,15 +1,20 @@
 import React from 'react';
-import Header from "./components/Header";
-import Main from './components/Main';
 import Footer from './components/Footer';
-import Nav from './components/Nav'
-import './App.css'; 
+import Nav from './components/Nav';
+import './App.css';
+import Booking from './components/booking.js';
+import About from './components/about.js';
+import Testmonials from './components/testmonials.js';
+import Highlights from './components/highlights.js';
 
 function App() {
   return (
-    <div className="container">  
+    <div className="container">
       <Nav />
-      <Main />
+      <Booking />
+      <Highlights />
+      <Testmonials />
+      <About />
       <Footer />
     </div>
   );

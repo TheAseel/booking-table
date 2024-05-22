@@ -1,5 +1,5 @@
 import React from "react";
-import foodpic4 from "../../imgs/greek salad.jpg";
+import foodpic4 from "../imgs/greek salad.jpg";
 
 function About() {
   return (
