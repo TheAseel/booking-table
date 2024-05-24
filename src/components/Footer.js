@@ -1,38 +1,50 @@
 import React from 'react';
-import logo from "../imgs/small_logo.png"
+import logo from '../images/small_logo.png';
 
-function Footer() {
-  return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-logo">
-          <img src={logo}alt="Logo" />
-        </div>
-        <div className="footer-navigation">
-          <ul className="doormat-navigation">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-        <div className="footer-contact">
-          <h4>Contact Details</h4>
-          <p>123 Main Street, City</p>
-          <p>Email: info@example.com</p>
-          <p>Phone: (123) 456-7890</p>
-        </div>
-        <div className="footer-social">
-          <h4>Follow Us</h4>
-          <ul className="social-media-links">
-            <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i className="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i className="fab fa-instagram"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-  );
-}
+const Footer = () => {
+    return (
+        < footer >
+            < section >
+                <div className='company-info'>
+                    <img src={logo} alt='' />
+                    <p>We are a family owned Mediterraneran restaurant, focused on traditional recipes servred
+                        with a modern twist.</p>
+                </div>
+                <div>
+                    <h3>Important Links</h3>
+                    <ul>
+                        <li><a href='/'>Home</a></li>
+                        <li><a href='/'>About</a></li>
+                        <li><a href='/'>Menu</a></li>
+                        <li><a href='/'>Reservations</a></li>
+                        <li><a href='/'>Order Online</a></li>
+                        <li><a href='/'>Login</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>
+                        contact
+                    </h3>
+                    <ul>
+                        <li>adress<br />123 Fake Street, Cityville, State-12345, Country</li>
+                        <li>phone <br />+1 555-123-4567</li>
+                        <li>email<br /> example@example.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Social media</h3>
+                    <ul>
+                        <li><a href='/'>Facebook</a></li>
+                        <li><a href='/'>instagram</a></li>
+                        <li><a href='/'>twitter</a></li>
+
+                    </ul>
+                </div>
+            </section >
+        </footer >
+    );
+
+};
 
 export default Footer;

@@ -1,21 +1,20 @@
 import React from 'react';
-import Footer from './components/Footer';
-import Nav from './components/Nav';
 import './App.css';
-import Booking from './components/booking.js';
-import About from './components/about.js';
-import Testmonials from './components/testmonials.js';
-import Highlights from './components/highlights.js';
+import Nav from './components/Nav';
+import Main from './components/Main';
+import Menu from './components/Menu';
+import Footer from './components/Footer';
+
+
 
 function App() {
   return (
-    <div className="container">
-      <Nav />
-      <Booking />
-      <Highlights />
-      <Testmonials />
-      <About />
-      <Footer />
+ 
+    <div>
+      <Nav/>
+      <Main/>
+      <Menu/>
+      <Footer/>
     </div>
   );
 }
