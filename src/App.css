@@ -68,8 +68,7 @@ nav ul li a:hover{
   transition: all 0.3s ease-in-out;
 }
 
-
-/* header section */
+/* ================================================================================== */
 
 .header {
   background-color: #495e57;
@@ -115,7 +114,7 @@ button {
   position: absolute;
   right: 13%;
   top: 15%;
-  width: 400px;
+  width: 500px;
 }
 
 .banner-img img {
@@ -146,21 +145,27 @@ input, label{
   border-radius: 2px;
 }
 
-.btnReceive input{
-  padding: 12px 16px;
-  margin-top: 20px;
-  background: #495e57;
-  color: #fff;
+.inputmake{
+  background-color: #f4cf14;
+  color: black;
   border: none;
-  border-radius: 4px;
-
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  height: 90px;
 }
 
+.inputmake[type="submit"] {
+  height: 20px;
+  width: 250px;
+}
 .comfirm span{
   color: blue;
 }
 
-
+/* ================================================================================== */
 /* menu items */
 
 .menu-container{
@@ -190,7 +195,7 @@ input, label{
 .menu-items{
   /* height: 400px; */
   width: 350px;
-  background: #a9c8be;
+  background: #495E57;
   border-radius: 8px;
 }
 
@@ -216,7 +221,7 @@ input, label{
   font-size: 16px;
   font-weight: 600;
 }
-
+/* ================================================================================== */
 footer section{
   padding: 10px 13%;
   display: flex;
@@ -245,7 +250,7 @@ footer ul{
 footer ul li{
   padding: 8px 0;
 }
-
+/* ================================================================================== */
 
 @media screen and (max-width: 768px){
   .menu-icon {
@@ -284,10 +289,11 @@ footer ul li{
     padding: 10px 8%;
   }
 
-
+/* ================================================================================== */
   .header section, .menu-container{
     padding: 10px 8%;
   }
+  
   .menu-container{
     margin: 20px 0;
   }
@@ -310,4 +316,105 @@ footer ul li{
 
 .hidden{
   display: none;
+}
+
+/* ================================================================================== */
+.about {
+  background-color: #495E57;
+  height: 500px;
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f4ce14;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-box-placeholder {
+  width: 300px;
+  height: 500px;
+
+  margin-right: 20px;
+  color: #ffffff;
+  
+}
+
+.image-placeholder {
+  width: 300px;
+  height: 600px;
+
+}
+
+.image-placeholder img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+}
+/* ======================================================================= */
+.testimonials {
+  padding: 40px 0;
+  background-color: #ffffff;
+}
+
+.testimonials-background {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.testimonials h2 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.testimonial-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.testimonial-item {
+  width: 300px;
+  margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-content h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.testimonial-content p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.rating .star {
+  color: #f4ce14;
+  font-size: 16px;
+  margin-right: 3px;
+}
+/* ================================================================================== */
+
+.form-field p{
+color:red;
 }

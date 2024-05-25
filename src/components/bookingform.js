@@ -6,6 +6,17 @@ const BookingForm = (props) => {
     const [times, setTime] = useState("");
     const [guests, setGuests] = useState("");
     const [occasion, setOccasion] = useState("");
+    const invalidDateErrorMessage = 'Please choose a valid date';
+    const invalidTimeErrorMessage = 'Please choose a valid time';
+    const invalidOccasionErrorMessage = 'Please choose a valid occasion';
+    const invalidNumberOfGuestsErrorMessage =
+        'Please enter a number between 1 and 10';
+    const isDateValid = () => date !== '';
+    const isTimeValid = () => times !== '';
+    const isNumberOfGuestsValid = () => guests !== '';
+    const isOccasionValid = () => occasion !== '';
+    const areAllFieldsValid = () => { isDateValid() && isTimeValid() && isNumberOfGuestsValid() && isOccasionValid(); }
+
 
     const hundleSubmit = (e) => {
         e.preventDefault();
@@ -22,43 +33,53 @@ const BookingForm = (props) => {
             <section>
                 <form onSubmit={hundleSubmit}>
                     <fieldset>
-                        {/* date */}
-                        <div>
-                            <label htmlFor='book-date'>Choose Date</label>
-                            <input id='book-date' value={date} onChange={(e) => handleChange(e.target.value)}
-                                type='date' required />
-                        </div>
-                        {/* time */}
-                        <div>
-                            <label htmlFor='book-time' >Choose Time: </label>
+                        <FormField
+                            label="Date:"
+                            htmlFor="booking-date"
+                            hasError={!isDateValid()}
+                            errorMessage={invalidDateErrorMessage}
+                        ></FormField>
+                        <input id='book-date' value={date} onChange={(e) => handleChange(e.target.value)}
+                            type='date' required />
+                        <FormField
+                            label="Time:"
+                            htmlFor="booking-time"
+                            hasError={!isTimeValid()}
+                            errorMessage={invalidTimeErrorMessage}
+                        >
                             <select id="book-time" value={times} onChange={(e) => setTime(e.target.value)}>
                                 <option value="">Select a Time</option>
                                 {props.availableTimes.availableTimes.map(availableTimes => { return <option key={availableTimes}>{availableTimes}</option> })}
 
                             </select>
-                        </div>
-                        {/* guest */}
-
-                        <div>
-                            <label htmlFor='book-guests'>Number of Guests:</label>
+                        </FormField>
+                        <FormField
+                            label="Number of guests"
+                            htmlFor="booking-number-guests"
+                            hasError={!isNumberOfGuestsValid()}
+                            errorMessage={invalidNumberOfGuestsErrorMessage}
+                        >
                             <input id='book-guests' min='1' value={guests} onChange={(e) => setGuests(e.target.
                                 value)} />
-                            
-                        </div> 
-                        {/* Ocation */}
-                        <div>
-                            <label htmlFor='book-occasion' >Occasion:</label>
+                        </FormField>
+                        <FormField
+                            label="Occasion"
+                            htmlFor="booking-occasion"
+                            hasError={!isOccasionValid()}
+                            errorMessage={invalidOccasionErrorMessage}
+                        >
                             <select id='book-occasion' key={occasion} value={occasion} onChange={e => setOccasion
                                 (e.target.value)}>
                                 <option>Birthday</option>
                                 <option>Anniversary</option>
                             </select>
-                        </div>
-                        {/* submit button */}
-                        <div className='btnReceive'>
-                            <input aria-label='On Click' type='submit' value={"Make Your Reservation"} />
-                        </div>
-
+                        </FormField>
+                        <button
+                            type="submit"
+                            disabled={!areAllFieldsValid()}
+                        >
+                            <input className='inputmake' aria-label='On Click' type='submit' value={"Make Your Reservation"} />
+                        </button>
                     </fieldset>
 
 
@@ -69,3 +90,16 @@ const BookingForm = (props) => {
 
 };
 export default BookingForm;
+
+
+const FormField = ({ children, label, htmlFor, hasError, errorMessage }) => {
+    return (
+        <div className="form-field">
+            <label htmlFor={htmlFor}>{label}</label>
+            {children}
+            {hasError && errorMessage ?
+                <p data-testid="error-message">{errorMessage}</p> : null}
+        </div>
+    );
+};
+

@@ -1,28 +1,26 @@
+
 const recipes = [
     { 
       id: 1,
-      title: "Greek salad",
+      title: "Soup",
       price: 12.99,
-      image: "https://i.ibb.co/68c9bLv/greek-salad.jpg",
+      image: "https://i.imgur.com/XATaaNJ.jpeg",
       description:
-        "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style fota cheese, garnished with crunchy garlic and rosemary croutons",
-    },
+        "Comforting and flavorful dish made with broth, vegetables, meat, or seafood, perfect for warming up and nourishing the body." },
     {
       id: 2,
-      title: "Bruchetta",
+      title: "Pizza",
       price: 5.99,
-      image: "https://i.ibb.co/317GqZv/Bruchetta.png",
+      image: "https://i.imgur.com/UDpUiEu.jpeg",
       description:
-        "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
-    },
+        "Classic Italian dish with a thin crust, topped with flavorful tomato sauce, cheese, and a variety of toppings." },
     {
       id: 3,
-      title: "Lemon Dessert",
+      title: "Sandwich",
       price: 4.78,
-      image: "https://i.ibb.co/sm6MfcH/desert.jpg",
+      image: "https://i.imgur.com/yXTy3Bf.jpeg",
       description:
-        "This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
-    },
+        "Versatile meal made with sliced meats, cheese, veggies, and spreads, served between two slices of bread"},
   
   ];
   

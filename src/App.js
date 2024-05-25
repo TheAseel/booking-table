@@ -3,6 +3,8 @@ import './App.css';
 import Nav from './components/Nav';
 import Main from './components/Main';
 import Menu from './components/Menu';
+import About from './components/about';
+import Testimonals from './components/testmonials';
 import Footer from './components/Footer';
 
 
@@ -14,6 +16,8 @@ function App() {
       <Nav/>
       <Main/>
       <Menu/>
+      <About/>
+      <Testimonals/>
       <Footer/>
     </div>
   );
